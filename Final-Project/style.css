@@ -35,6 +35,10 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+#tribute-link-hidden {
+  display: none;
+}
+
 /* header */
 
 header {
@@ -137,9 +141,40 @@ footer a {
   #tribute-info p:not(.plus-infos) {
     font-size: 0.8rem;
   }
+  p.plus-infos {
+    font-size: 0.7rem;
+  }
+  footer,
+  footer a {
+    font-size: 0.7rem;
+  }
 }
 
 /* display layout */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 300px) {
+  header {
+    font-size: 1rem;
+  }
+  p.plus-infos a {
+    display: none;
+  }
+  #tribute-link-hidden {
+    display: block;
+  }
+  #tribute-info p:not(.plus-infos) {
+    padding: 1rem;
+    padding-top: 0;
+  }
+  #img-caption {
+    padding: 1rem;
+  }
 }
+
+/* @media screen and (max-width: 300px) {
+  header {
+    font-size: 1rem;
+  }
+ 
+} */
+
