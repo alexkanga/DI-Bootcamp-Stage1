@@ -1,6 +1,21 @@
 /* import Google fonts to customize fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
 
+/* Custom properties/variables  */
+
+:root {
+  --main-white: #f0f0f0;
+  --main-aqua: aqua;
+  --main-yellow: rgb(236, 175, 19);
+  --main-black: #000000;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* Setting a base font size of 16px give us easier rem calculations
      Info: 1rem === 16px, 1.5rem === 24px, 2rem === 32px and so forth
    */
@@ -13,22 +28,22 @@ html {
 
 body {
   margin: 0;
-  background: #000;
+  background: var(--main-black);
   padding: 0;
   font-family: verdana, arial, sans-serif;
-  color: #fff;
-  font-family: 'Nunito', sans-serif;
+  color: var(--main-white);
+  font-family: "Nunito", sans-serif;
 }
 
 /* header */
 
 header {
   text-align: center;
-  background-color: rgb(236, 175, 19);
-  color: rgb(255, 255, 255);
+  background-color: var(--main-yellow);
+  color: var(--main-white);
   margin: 0;
-  padding: 2%;
-  font-size: 3rem;
+  padding: 1%;
+  font-size: 2rem;
 }
 header h1,
 p {
@@ -60,7 +75,7 @@ article img {
 
 #img-caption {
   padding: 2rem;
-  color: rgb(236, 175, 19);
+  color: var(--main-yellow);
   text-transform: capitalize;
   font-size: 2rem;
 }
@@ -78,7 +93,7 @@ article img {
   height: auto;
   display: block;
   margin: 0 auto;
-  display:block;
+  display: block;
 }
 
 a {
@@ -92,19 +107,39 @@ p.plus-infos {
 
 p.plus-infos a {
   text-decoration: none;
-  color: rgb(236, 175, 19);
+  color: var(--main-yellow);
 }
-
-
 
 /* footer */
 footer {
-  color: aqua;
+  color: var(--main-aqua);
   text-align: center;
   padding: 2rem;
 }
 footer a {
-  color: aqua;
+  color: var(--main-aqua);
   text-decoration: none;
   display: inline;
+}
+
+/* responsive design */
+
+/* font-size */
+
+@media screen and (max-width: 450px) {
+  header {
+    font-size: 1.5rem;
+  }
+  #img-caption {
+    font-size: 1.1rem;
+  }
+
+  #tribute-info p:not(.plus-infos) {
+    font-size: 0.8rem;
+  }
+}
+
+/* display layout */
+
+@media screen and (max-width: 450px) {
 }
